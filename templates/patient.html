@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient</title>
+    <style>
+        .pat{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        h1{
+            background-color: rgb(105, 105, 167);
+            text-align: center;
+        }
+        .pat input{
+                margin-top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+    
+    <div class="pat">
+        <form action="patient1" method="post">
+            {% csrf_token %}
+            <h3>Fill all the details of patient</h3>
+            <label for="patname">Name:</label>
+            <input type="text" name="patname" id="patname"> <br>
+
+            <label for="disease">Disease:</label>
+            <input type="text" name="disease" id="disease" > <br>
+
+            <label for="patid">ID:</label>
+            <input type="number" name="patid" id="patid" > <br>
+
+            <label for="patadd">Address:</label>
+            <input type="text" name="patadd" id="patadd" > <br>
+
+            <label for="patnumber">Number:</label>
+            <input type="number" name="patnumber" id="patnumber" > <br>
+
+            <button type="submit">Add Patient</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+
+    <style>
+        h1{
+            background-color: rgb(105, 105, 167);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+    Create a Appoint!
+    <form action="appoint" method="post">
+    {% csrf_token %}
+    <label for="patientname"></label>
+    <input type="text" name="patientname" id="patientname" placeholder="Patient name..."> <br>
+
+    <label for="doctorname"></label>
+    <input type="text" name="doctorname" id="doctorname" placeholder="Doctor name..."> <br>
+    <button type="submit">Add appoint</button>
+
+    </form>
+
+</body>
+</html>

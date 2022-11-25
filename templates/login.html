@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #head{
+            background-color: rgb(105, 105, 167);
+            text-align: center;
+        }
+
+        #signin{
+            background-color: rgb(105, 105, 167);
+            text-align: center;
+        }
+
+        .main{
+            background-color: bisque;
+            text-align: center;
+            margin-top: 175px;
+            width: 500px;
+            height: 150px;
+            margin-left: 450px;
+            border-radius: 12px;
+            border: solid black 5px;
+        }
+        #username{
+            margin-top: 33px;
+        }
+
+        #password{
+            margin-top: 5px;
+            margin-left: 2px;
+        }
+        #login{
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="head">Hospital Mangement System!</h2>
+    <h3 id="signin">Sign In</h3>
+    <form action="\signin" method="post">
+        {% csrf_token %}
+        <div class="main">
+        <input  type="text" name="username" id="username" placeholder="Username.."> <br>
+        <input type="password" name="password" id="password" placeholder="Password.."> <br>
+        <button type="submit" id="login"> Sign in </button>
+    </div>
+    </form>
+</body>
+</html>
